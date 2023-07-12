@@ -1,0 +1,7 @@
+theme = "snazzy"
+
+[editor]
+bufferline = "multiple"
+
+[editor.cursor-shape]
+insert = "bar"
