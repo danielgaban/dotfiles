@@ -77,6 +77,11 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+# capacitor path to launch android studio
+export CAPACITOR_ANDROID_STUDIO_PATH="/var/lib/flatpak/app/com.google.AndroidStudio/current/active/export/bin/com.google.AndroidStudio"
+
+# add helix to path
+export PATH=”$HOME/.cargo/bin:$PATH”
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -99,6 +104,18 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias zel="zellij"
 alias gmoji="gitmoji -c"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+alias xu='sudo xbps-install xbps && sudo xbps-install -Suv'
+alias xin='sudo xbps-install'
+alias xr='sudo xbps-remove -Rcon'
+alias xl='xbps-query -l'
+alias xf='xl | grep'
+alias xs='xbps-query -Rs'
+alias xd='xbps-query -x'
+alias clrk='sudo vkpurge rm all && sudo rm -rf /var/cache/xbps/*'
+alias halt='sudo halt'
+alias poweroff='sudo poweroff'
+alias reboot='sudo reboot'
+alias shutdown='sudo shutdown'
