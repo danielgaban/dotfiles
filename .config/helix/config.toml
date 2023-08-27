@@ -5,3 +5,6 @@ bufferline = "multiple"
 
 [editor.cursor-shape]
 insert = "bar"
+
+# [editor.soft-wrap]
+# enable = true

@@ -1,34 +1,13 @@
-[[language]]
-name = "html"
-formatter = { command = 'prettier', args = ["--parser", "html"] }
+[language-server.astro-ls]
+  command = "astro-ls"
+  args = ["--stdio"]
+  config = { "typescript" = { "tsdk" = "/usr/lib/node_modules/typescript/lib/"}, "environment" = "node" }
 
-[[language]]
-name = "json"
-formatter = { command = 'prettier', args = ["--parser", "json"] }
+[language-server.tailwind-ls]
+  command = "hx-tw"
+  args = ["--stdio"]
+  timeout = 5
 
-[[language]]
-name = "css"
-formatter = { command = 'prettier', args = ["--parser", "css"] }
-
-[[language]]
-name = "javascript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-
-[[language]]
-name = "typescript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-
-[[language]]
-name = "svelte"
-formatter = { command = 'prettier', args = ["--parser", "svelte"] }
-
-[[language]]
-name = "prisma"
-formatter = { command = 'prettier', args = ["--parser", "prisma"] }
-
-[[language]]
-name = "toml"
-formatter = { command = 'prettier', args = ["--parser", "toml"] }
 
 [[language]]
 name = "astro"
@@ -36,12 +15,45 @@ scope = "source.astro"
 injection-regex = "astro"
 file-types = ["astro"]
 roots = ["package.json", "astro.config.mjs"]
-  [language.language-server]
-  command = "astro-ls"
-  args = ["--stdio"]
-  [language.config.typescript]
-  serverPath = "/usr/local/lib/node_modules/typescript/lib/tsserverlibrary.js"
-  [language.formatter]
-  command = 'prettier'
-  args = ["--parser", "astro"]
+language-servers = ["astro-ls", "tailwind-ls"]
+formatter = { command = 'pnpm', args = ["prettier", "--parser", "astro"] }
+
+[[language]]
+name = "svelte"
+language-servers = ["svelteserver", "tailwind-ls"]
+formatter = { command = 'pnpm', args = ["prettier", "--parser", "svelte"] }
+
+
+[[language]]
+name = "javascript"
+formatter = { command = 'pnpm', args = ["prettier", "--parser", "typescript"] }
+
+[[language]]
+name = "typescript"
+formatter = { command = 'pnpm', args = ["prettier", "--parser", "typescript"] }
+
+[[language]]
+name = "html"
+formatter = { command = 'pnpm', args = ["prettier", "--parser", "html"] }
+auto-format = false
+
+[[language]]
+name = "css"
+formatter = { command = 'pnpm', args = ["prettier", "--parser", "css"] }
+auto-format = false
+
+[[language]]
+name = "markdown"
+formatter = { command = 'pnpm', args = ["prettier", "--parser", "markdown"] }
+auto-format = false
+
+[[language]]
+name = "json"
+formatter = { command = 'pnpm', args = ["prettier", "--parser", "json"] }
+auto-format = false
+
+[[language]]
+name = "toml"
+formatter = { command = 'pnpm', args = ["prettier", "--parser", "toml"] }
+auto-format = false
 
