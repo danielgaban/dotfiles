@@ -81,7 +81,9 @@ source $ZSH/oh-my-zsh.sh
 export CAPACITOR_ANDROID_STUDIO_PATH="/var/lib/flatpak/app/com.google.AndroidStudio/current/active/export/bin/com.google.AndroidStudio"
 
 # add helix to path
-export PATH=”$HOME/.cargo/bin:$PATH”
+export PATH="$HOME/.cargo/bin:$PATH"
+# add pip to path
+export PATH="$HOME/.local/bin:$PATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

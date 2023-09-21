@@ -1,4 +1,4 @@
-theme = "snazzy"
+theme = "zed_onelight"
 
 [editor]
 bufferline = "multiple"

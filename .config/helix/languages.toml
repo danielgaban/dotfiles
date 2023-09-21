@@ -8,6 +8,10 @@
   args = ["--stdio"]
   timeout = 5
 
+[language-server.pyright-ls]
+  command = "pyright-langserver"
+  args = ["--stdio"]
+  config = {}
 
 [[language]]
 name = "astro"
@@ -23,6 +27,9 @@ name = "svelte"
 language-servers = ["svelteserver", "tailwind-ls"]
 formatter = { command = 'pnpm', args = ["prettier", "--parser", "svelte"] }
 
+[[language]]
+name = "python"
+language-servers = ["pyright-ls"]
 
 [[language]]
 name = "javascript"
