@@ -1,0 +1,7 @@
+[user]
+	name = danielgaban
+	email = 91639510+danielgaban@users.noreply.github.com
+[init]
+	defaultBranch = main
+[alias]
+	tree = log --oneline --decorate --all --graph
