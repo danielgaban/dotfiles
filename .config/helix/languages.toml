@@ -13,6 +13,11 @@
   args = ["--stdio"]
   config = {}
 
+[language-server.typescript-ls]
+  command = "typescript-language-server"
+  args = ["--stdio"]
+  config = { implicitProjectConfiguration = { checkJs = true } }
+
 [[language]]
 name = "astro"
 scope = "source.astro"
@@ -25,6 +30,7 @@ formatter = { command = 'pnpm', args = ["prettier", "--parser", "astro"] }
 [[language]]
 name = "svelte"
 language-servers = ["svelteserver", "tailwind-ls"]
+roots = ["svelte.config.js"]
 formatter = { command = 'pnpm', args = ["prettier", "--parser", "svelte"] }
 
 [[language]]
@@ -34,6 +40,7 @@ language-servers = ["pyright-ls"]
 [[language]]
 name = "javascript"
 formatter = { command = 'pnpm', args = ["prettier", "--parser", "typescript"] }
+language-servers = ["typescript-ls"]
 
 [[language]]
 name = "typescript"
