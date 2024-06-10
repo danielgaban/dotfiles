@@ -78,8 +78,11 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 # Add Homebrew's executable directory to the front of the PATH
-export PATH=$PATH:/opt/homebrew/bin
+export PATH="/opt/homebrew/bin:$PATH"
+# golang
 export PATH=$PATH:$HOME/go/bin/
+# node
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

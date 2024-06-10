@@ -4,7 +4,7 @@
   # config = { "typescript" = { "tsdk" = "/usr/lib/node_modules/typescript/lib/"}, "environment" = "node" }
 
 [language-server.tailwind-ls]
-  command = "hx-tw"
+  command = "tailwindcss-language-server"
   args = ["--stdio"]
   timeout = 5
 
