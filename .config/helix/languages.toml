@@ -8,10 +8,15 @@
   args = ["--stdio"]
   timeout = 5
 
-[language-server.pyright-ls]
-  command = "pyright-langserver"
-  args = ["--stdio"]
-  config = {}
+# [language-server.pylsp-ls]
+#   command = "pylsp"
+  # args = ["--stdio"]
+  # config = {}
+
+# [language-server.pyright-ls]
+#   command = "pyright-langserver"
+#   args = ["--stdio"]
+#   config = {}
 
 [language-server.typescript-ls]
   command = "typescript-language-server"
@@ -32,10 +37,6 @@ name = "svelte"
 language-servers = ["svelteserver", "tailwind-ls"]
 roots = ["svelte.config.js"]
 formatter = { command = 'pnpm', args = ["prettier", "--parser", "svelte"] }
-
-[[language]]
-name = "python"
-language-servers = ["pyright-ls"]
 
 [[language]]
 name = "javascript"
@@ -69,5 +70,16 @@ auto-format = false
 [[language]]
 name = "toml"
 formatter = { command = 'pnpm', args = ["prettier", "--parser", "toml"] }
+auto-format = false
+
+[[language]]
+name = "solidity"
+formatter = { command = 'pnpm', args = ["prettier", "--parser", "solidity-parse"] }
+auto-format = false
+
+[[language]]
+name = "python"
+# language-servers = ["pylsp-ls"]
+formatter = { command = "black", args = ["--quiet", "-"] }
 auto-format = false
 
