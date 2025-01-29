@@ -8,15 +8,10 @@
   args = ["--stdio"]
   timeout = 5
 
-# [language-server.pylsp-ls]
-#   command = "pylsp"
-  # args = ["--stdio"]
-  # config = {}
-
-# [language-server.pyright-ls]
-#   command = "pyright-langserver"
-#   args = ["--stdio"]
-#   config = {}
+[language-server.pyright-ls]
+  command = "pyright-langserver"
+  args = ["--stdio"]
+  config = {}
 
 [language-server.typescript-ls]
   command = "typescript-language-server"
@@ -79,7 +74,6 @@ auto-format = false
 
 [[language]]
 name = "python"
-# language-servers = ["pylsp-ls"]
-formatter = { command = "black", args = ["--quiet", "-"] }
 auto-format = false
+# language-servers = ["pylsp"]
 
