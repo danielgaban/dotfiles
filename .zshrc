@@ -113,3 +113,4 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Created by `pipx` on 2024-12-08 10:26:30
 export PATH="$PATH:/Users/danielgaban/.local/bin"
+export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
