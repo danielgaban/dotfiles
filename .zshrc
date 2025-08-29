@@ -109,6 +109,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias notr='~/Desktop/Code/python/notr/.venv/bin/python ~/Desktop/Code/python/notr/'
 
 
 # Created by `pipx` on 2024-12-08 10:26:30
