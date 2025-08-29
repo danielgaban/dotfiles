@@ -121,6 +121,6 @@ brew() {
     command brew "$@"
     brew bundle dump --file=$HOME/.config/homebrew/Brewfile --describe --force
   else
-    command brew "$0"
+    command brew "$@"
   fi
 }
