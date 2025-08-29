@@ -115,3 +115,12 @@ alias notr='~/Desktop/Code/python/notr/.venv/bin/python ~/Desktop/Code/python/no
 # Created by `pipx` on 2024-12-08 10:26:30
 export PATH="$PATH:/Users/danielgaban/.local/bin"
 export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
+
+brew() {
+  if [[ "$1" == install ]]; then
+    command brew "$@"
+    brew bundle dump --file=$HOME/.config/homebrew/Brewfile --describe --force
+  else
+    command brew "$0"
+  fi
+}
