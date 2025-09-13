@@ -20,6 +20,8 @@ brew "lf"
 brew "libpq", link: true
 # Library for USB device access
 brew "libusb"
+# Find licenses for your project's dependencies
+brew "licensefinder"
 # List USB devices, just like the Linux lsusb command
 brew "lsusb"
 # Platform built on V8 to build network applications
