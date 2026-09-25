@@ -109,7 +109,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias notr='~/Desktop/Code/python/notr/.venv/bin/python ~/Desktop/Code/python/notr/'
+alias lobs='openclaw tui'
 
 
 # Created by `pipx` on 2024-12-08 10:26:30
@@ -117,10 +117,31 @@ export PATH="$PATH:/Users/danielgaban/.local/bin"
 export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
 
 brew() {
-  if [[ "$1" == install ]]; then
-    command brew "$@"
-    brew bundle dump --file=$HOME/.config/homebrew/Brewfile --describe --force
-  else
-    command brew "$@"
-  fi
+  command brew "$@" || return
+  case "$1" in
+    install|reinstall|uninstall|remove|rm|tap|untap)
+      command brew bundle dump --file="$HOME/.config/homebrew/Brewfile" --force
+      ;;
+  esac
 }
+
+notr() {
+  local dir="$HOME/Desktop/code/python/notr"
+  "$dir/.venv/bin/python" "$dir" "$@"
+}
+
+
+# bun completions
+[ -s "/Users/danielgaban/.bun/_bun" ] && source "/Users/danielgaban/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export HELIX_RUNTIME=~/src/helix/runtime
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+alias mountshares="~/mount-shares.sh"

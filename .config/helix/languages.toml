@@ -13,6 +13,7 @@
   args = ["--stdio"]
   config = { implicitProjectConfiguration = { checkJs = true } }
 
+
 [[language]]
 name = "astro"
 scope = "source.astro"
@@ -30,17 +31,12 @@ formatter = { command = 'pnpm', args = ["prettier", "--parser", "svelte"] }
 
 [[language]]
 name = "javascript"
-formatter = { command = 'pnpm', args = ["prettier", "--parser", "typescript"] }
+formatter = { command = "pnpm", args = ["prettier", "--parser", "babel"] }
 language-servers = ["typescript-ls"]
 
 [[language]]
 name = "typescript"
 formatter = { command = 'pnpm', args = ["prettier", "--parser", "typescript"] }
-
-[[language]]
-name = "html"
-formatter = { command = 'pnpm', args = ["prettier", "--parser", "html"] }
-auto-format = false
 
 [[language]]
 name = "css"

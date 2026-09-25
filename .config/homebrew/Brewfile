@@ -1,60 +1,104 @@
-# Command-line interface for SQLite
-brew "sqlite"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
+tap "antoniorodr/memo"
+tap "openclaw/tap"
+tap "oven-sh/bun"
+tap "steipete/tap"
+# Download with resuming and segmented downloading
+brew "aria2"
+# Library for USB device access
+brew "libusb"
+# Swiss army knife for network attacks and monitoring
+brew "bettercap"
+# Get/set bluetooth power and discoverable state
+brew "blueutil"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
 # Defines a standard way of committing rules and communicating it
 brew "commitizen"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Convert text between DOS, UNIX, and Mac formats
 brew "dos2unix"
-# Access GitHub's .gitignore boilerplates
-brew "gibo"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
-# Post-modern modal text editor
-brew "helix"
-# Terminal file manager
-brew "lf"
 # Postgres C API library
 brew "libpq", link: true
-# Library for USB device access
-brew "libusb"
+# Geospatial Data Abstraction Library
+brew "gdal"
+# Access GitHub's .gitignore boilerplates
+brew "gibo"
+# Create `.gitignore` using templates from TopTal, GitHub or your own collection
+brew "gitnr"
+# Render markdown on the CLI
+brew "glow"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# World's fastest and most advanced password recovery utility
+brew "hashcat"
+# Utils for conversion of cap/pcap/pcapng WiFi dump files
+brew "hcxtools"
+# Library for communicating with USB and Bluetooth HID devices
+brew "hidapi"
+# Terminal file manager
+brew "lf"
 # Find licenses for your project's dependencies
 brew "licensefinder"
 # List USB devices, just like the Linux lsusb command
 brew "lsusb"
-# Platform built on V8 to build network applications
-brew "node@20"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node@24"
+# Manage multiple Node.js versions
+brew "nvm"
+# Your own personal AI assistant
+brew "openclaw-cli"
+# Framework for layout and rendering of i18n text
+brew "pango"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
+# Fast, disk space efficient package manager
+brew "pnpm"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
+# Safe, concurrent, practical language
+brew "rust"
 # Contract-oriented programming language
 brew "solidity"
+# Multi-modal AI tool to extract and summarize content
+brew "summarize"
+# HTML Language Server & Templating Language Library
+brew "superhtml"
+# Text interface for Git repositories
+brew "tig"
 # Terminal multiplexer
 brew "tmux"
 # CLI tool that moves files or folder to the trash
 brew "trash", link: true
+# Modern Go client + CLI for the Google Places API (New).
+brew "openclaw/tap/goplaces", link: false
 # Allows connection to a computer remotely
 cask "anydesk"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
 # Universal database tool and SQL client
 cask "dbeaver-community"
+# Voice and text chat software
+cask "discord"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
 # Bitcoin thin client
 cask "electrum"
 # Collaborative team software
 cask "figma"
-# Web browser
-cask "firefox"
 cask "font-caskaydia-mono-nerd-font"
 cask "font-iosevka-term-nerd-font"
 cask "font-recursive-mono-nerd-font"
+# Web browser
+cask "google-chrome"
+# Modern Go client + CLI for the Google Places API (New).
+cask "openclaw/tap/goplaces", trusted: true
 # Open Source Multimedia Framework
 cask "gstreamer-runtime"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-# Desktop virtualization software
-cask "parallels"
 # Collaboration platform for API development
 cask "postman"
 # Tool to reverse the direction of scrolling
@@ -63,20 +107,29 @@ cask "scroll-reverser"
 cask "spotify"
 # Video game digital distribution service
 cask "steam"
+# Remote access and connectivity software focused on security
+cask "teamviewer"
 # Open-source code editor
 cask "visual-studio-code"
 # Remote desktop application focusing on security
 cask "vnc-viewer"
+# Administration tool for MikroTik RouterOS
+cask "winbox"
 # Compatibility layer to run Windows applications
 cask "wine-stable"
+# Video communication and virtual meeting platform
+cask "zoom"
 vscode "damien.autoit"
 vscode "genius257.autoit3-debug"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode.cmake-tools"
+vscode "ms-vscode.cpp-devtools"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
 vscode "nhoizey.gremlins"
 vscode "silverquark.dancehelix"
 vscode "sojibahmed.one-dark-night-theme"
+cargo "helix-term"
+npm "corepack"
